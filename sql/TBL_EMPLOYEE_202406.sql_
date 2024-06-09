@@ -1,0 +1,22 @@
+
+drop table TBL_EMPLOYEE_202406;
+
+create table TBL_EMPLOYEE_202406 (
+	eid char(8) not null primary key,
+	ename varchar2(20),
+	deptcode char(10),
+	grade varchar2(10),
+	salary number
+);
+
+
+insert into TBL_EMPLOYEE_202406 values (
+'20240001', '김부장', 'D001', '부장', 75600000);
+insert into TBL_EMPLOYEE_202406 values (
+'20240002', '박대리', 'D002', '대리', 42300000);
+insert into TBL_EMPLOYEE_202406 values (
+'20240003', '최사원', 'D001', '사원', 31200000);
+insert into TBL_EMPLOYEE_202406 values (
+'20240004', '주과장', 'D002', '과장', 53400000);
+insert into TBL_EMPLOYEE_202406 values (
+'20240005', '차차장', 'D001', '차장', 64500000);

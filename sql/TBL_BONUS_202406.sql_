@@ -1,0 +1,20 @@
+drop table TBL_BONUS_202406;
+
+create table TBL_BONUS_202406 (
+	deptcode char(10) not null primary key,
+	bper number
+);
+
+
+insert into TBL_BONUS_202406 values ('D001', 15);
+insert into TBL_BONUS_202406 values ('D002', 25);
+
+MERGE INTO TBL_BONUS_202406
+USING DUAL
+	ON (trim(deptcode) = 'D002') 
+	when matched then
+		update set
+			BPER = '35'
+	when not matched then
+		insert values ('D002', '35')
+;
